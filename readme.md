@@ -9,9 +9,13 @@
 </p>
 
 <p align="center">
-  <img alt="NPM Version Badge" src="https://badgen.net/npm/v/thumbned?color=red">
+  <a href="https://www.npmjs.com/package/thumbned">
+    <img alt="NPM Version Badge" src="https://badgen.net/npm/v/thumbned?color=red">
+  </a>
   <img alt="FFMPEG Version Badge" src="https://badgen.net/static/ffmpeg/4.1/green">
-  <img alt="License Badge" src="https://badgen.net/github/license/lamualfa/thumbned?color=purple">
+  <a href="https://github.com/lamualfa/thumbned/blob/main/license">
+    <img alt="License Badge" src="https://badgen.net/github/license/lamualfa/thumbned?color=purple">
+  </a>
 </p>
 
 <hr/>
