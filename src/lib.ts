@@ -24,8 +24,6 @@ import {
 } from './type.js'
 import ora from 'ora'
 
-console.log(ffprobeBin.version)
-
 const DEFAULT_THUMBNAIL_EXTENSION = 'png'
 
 export async function clearThumbnailPath(options: DeleteThumbnailPathOptions) {
