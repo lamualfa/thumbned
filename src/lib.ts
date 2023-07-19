@@ -10,6 +10,7 @@ import fs from 'fs-extra'
 import kleur from 'kleur'
 import { temporaryFile } from 'tempy'
 import unquote from 'unquote'
+import open from 'open'
 import {
   AskInputPathOptions,
   AskOutputPathOptions,
@@ -21,6 +22,9 @@ import {
   SetThumbnailOptions,
   ThumbnailSourceType,
 } from './type.js'
+import ora from 'ora'
+
+console.log(ffprobeBin.version)
 
 const DEFAULT_THUMBNAIL_EXTENSION = 'png'
 
@@ -185,6 +189,7 @@ async function askThumbnailPathRandom(options: AskThumbnailPathOptions) {
       extension: DEFAULT_THUMBNAIL_EXTENSION,
     })
 
+    const spinner = ora(`Picking a random thumbnail from the video...`)
     await saveRandomVideoScreenshot({
       inputPath: options.inputPath,
       outputPath: thumbnailPath,
@@ -192,12 +197,16 @@ async function askThumbnailPathRandom(options: AskThumbnailPathOptions) {
 
     totalAttempt++
 
+    spinner.text = 'Opening the generated thumbnail...'
+    await open(thumbnailPath)
+    spinner.succeed(
+      `(${totalAttempt}) The generated thumbnail has been opened in a new window.`
+    )
+
     const { isApproved } = await prompts({
       type: 'confirm',
       name: 'isApproved',
-      message: `Do you want to use this ${formatPathForLog(
-        thumbnailPath
-      )} image as the thumbnail? (attempt: ${totalAttempt})`,
+      message: 'Do you want to use it for the thumbnail?',
     })
 
     if (!isApproved) {

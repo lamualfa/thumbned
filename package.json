@@ -1,11 +1,12 @@
 {
   "name": "thumbned",
-  "version": "0.0.1",
-  "description": "🖼️ Add Thumbnail into your video via Interactive CLI using FFMPEG.",
+  "version": "0.0.2",
+  "description": "🖼️ Add Thumbnail into your video using FFMPEG via Interactive CLI.",
   "keywords": [
     "video",
     "ffmpeg",
     "thumbnail",
+    "cli",
     "mp4",
     "mkv",
     "jpg",
@@ -34,6 +35,7 @@
     "fs-extra": "^11.1.1",
     "get-video-duration": "^4.1.0",
     "kleur": "^4.1.5",
+    "open": "^9.1.0",
     "ora": "^6.3.1",
     "prompts": "^2.4.2",
     "seconds-to-timestamp": "^0.0.2",
@@ -45,5 +47,6 @@
   ],
   "repository": {
     "url": "https://github.com/lamualfa/thumbned"
-  }
+  },
+  "license": "WTFPL"
 }

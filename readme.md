@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  🖼️ Add Thumbnail into your video via Interactive CLI using FFMPEG.
+  🖼️ Add Thumbnail into your video using FFMPEG via Interactive CLI.
 </p>
 
 <p align="center">
@@ -18,6 +18,7 @@
 
 ## Features
 
+- **Interactive CLI** 🧠 So you don't have to memorize any flags or commands. Just run and follow it!
 - **Manual mode** Use your own image for thumbnail.
 - **Timestamp mode 🎞️** Use a frame at specific timestamp in the video for thumbnail.
 - **Random mode 🎲** Use a random frame in the video for thumbnail.
